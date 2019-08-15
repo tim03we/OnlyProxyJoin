@@ -1,0 +1,10 @@
+---
+# Activate or deactivate Proxy Join Protection.
+use-proxy: true
+
+# The proxy IP the player is normally logged on to.
+proxy-ip: "127.0.0.1"
+
+# The kick message when the player does not come through the proxy.
+kick-message: "Please connect through the proxy."
+...
