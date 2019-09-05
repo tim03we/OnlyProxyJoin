@@ -16,7 +16,7 @@ class OnlyProxyJoin extends PluginBase implements Listener {
 
     public function onPreLogin(PlayerPreLoginEvent $event) {
         if($this->getConfig()->get("use-proxy") == true) {
-            if(!$event->getPlayer()->getAddress() == $this->getConfig()->get("proxy-ip")) {
+            if($event->getPlayer()->getAddress()!= $this->getConfig()->get("proxy-ip")) {
                 $event->setKickMessage($this->getConfig()->get("kick-message"));
                 $event->setCancelled(true);
             }
